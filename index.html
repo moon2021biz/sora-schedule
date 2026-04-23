@@ -138,15 +138,22 @@
     td.border-left-taka  { border-left: 3px solid #1e8a49 !important; }
     td.border-left-event { border-left: 3px solid #b8860b !important; }
 
-    /* 日付セル */
+    /* 日付セル（横スクロール時に固定） */
     .date-cell {
-      white-space: nowrap; min-width: 76px;
+      white-space: nowrap; min-width: 80px;
       text-align: left; padding-left: 10px; font-weight: bold;
+      position: sticky; left: 0; z-index: 2;
+      background: white;
+      box-shadow: 2px 0 4px rgba(0,0,0,0.08);
+    }
+    /* ヘッダーの日付列も固定 */
+    thead th:first-child {
+      position: sticky; left: 0; z-index: 3;
     }
     tr.sat { background: rgba(26,109,181,0.03); }
-    tr.sat .date-cell { color: #1a5fa5; }
+    tr.sat .date-cell { color: #1a5fa5; background: #f5f8ff; }
     tr.sun { background: rgba(211,47,47,0.03); }
-    tr.sun .date-cell { color: #c62828; }
+    tr.sun .date-cell { color: #c62828; background: #fff8f8; }
     tr.empty-day td { opacity: 0.5; }
     tr.empty-day .date-cell { font-weight: normal; }
 
