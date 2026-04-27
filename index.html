@@ -58,12 +58,15 @@
     .month-content { display: none; }
     .month-content.active { display: block; }
 
-    /* テーブルラッパー */
+    /* テーブルラッパー（縦・横ともこのwrap内でスクロール／stickyのコンテナになる） */
     .table-wrap {
-      overflow-x: auto;
+      overflow: auto;
+      max-height: 70vh;          /* これがないと sticky-top が効かない */
       padding: 16px;
       -webkit-overflow-scrolling: touch;
       border-radius: 8px;
+      border: 1px solid #dde8f5;
+      background: white;
     }
     table {
       min-width: 780px;
@@ -146,23 +149,23 @@
       background: white;
       box-shadow: 2px 0 4px rgba(0,0,0,0.08);
     }
-    /* === ヘッダー固定（縦スクロール時） === */
-    /* スクール行（観音寺/高松/イベント）を上部固定 */
+    /* === ヘッダー固定（wrap内のスクロール基準） === */
+    /* スクール行（観音寺/高松/イベント）をwrap上部に固定 */
     thead tr.row-school th {
       position: sticky;
-      top: 50px;        /* タブの直下 */
+      top: 0;
       z-index: 4;
     }
     /* コース行（小学生/専門基礎/…）をスクール行の直下に固定 */
     thead tr.row-course th {
       position: sticky;
-      top: 84px;        /* スクール行の高さ分下 */
+      top: 43px;        /* スクール行の高さ分下（実測 ≈42.5px） */
       z-index: 4;
     }
     /* 日付ヘッダーは縦＋横の両方を固定（左上の角セル） */
     thead th.th-date {
       position: sticky;
-      top: 50px;
+      top: 0;
       left: 0;
       z-index: 10;      /* 他stickyより上に */
       background: #1a3a5c;
