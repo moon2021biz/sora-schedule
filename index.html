@@ -146,9 +146,10 @@
       background: white;
       box-shadow: 2px 0 4px rgba(0,0,0,0.08);
     }
-    /* ヘッダーの日付列も固定 */
-    thead th:first-child {
+    /* ヘッダーの日付列も固定（th-date クラスのみ。:first-child だと2段目ヘッダーの「小学生」列にも当たってしまうため不可） */
+    thead th.th-date {
       position: sticky; left: 0; z-index: 3;
+      background: #1a3a5c;
     }
     tr.sat { background: rgba(26,109,181,0.03); }
     tr.sat .date-cell { color: #1a5fa5; background: #f5f8ff; }
