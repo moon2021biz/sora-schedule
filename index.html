@@ -146,9 +146,25 @@
       background: white;
       box-shadow: 2px 0 4px rgba(0,0,0,0.08);
     }
-    /* ヘッダーの日付列も固定（th-date クラスのみ。:first-child だと2段目ヘッダーの「小学生」列にも当たってしまうため不可） */
+    /* === ヘッダー固定（縦スクロール時） === */
+    /* スクール行（観音寺/高松/イベント）を上部固定 */
+    thead tr.row-school th {
+      position: sticky;
+      top: 50px;        /* タブの直下 */
+      z-index: 4;
+    }
+    /* コース行（小学生/専門基礎/…）をスクール行の直下に固定 */
+    thead tr.row-course th {
+      position: sticky;
+      top: 84px;        /* スクール行の高さ分下 */
+      z-index: 4;
+    }
+    /* 日付ヘッダーは縦＋横の両方を固定（左上の角セル） */
     thead th.th-date {
-      position: sticky; left: 0; z-index: 3;
+      position: sticky;
+      top: 50px;
+      left: 0;
+      z-index: 10;      /* 他stickyより上に */
       background: #1a3a5c;
     }
     tr.sat { background: rgba(26,109,181,0.03); }
