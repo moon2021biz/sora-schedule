@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SORA 予定表 2026年3〜6月</title>
+  <title>SORA 予定表 2026年4〜6月</title>
   <style>
     :root {
       --blue: #1a6db5;
@@ -241,7 +241,7 @@
 
 <header>
   <h1>🏃 SORA 予定表</h1>
-  <p>Basic Sports Club SORA（ベーシックスポーツクラブ ソラ）2026年 3月〜6月</p>
+  <p>Basic Sports Club SORA（ベーシックスポーツクラブ ソラ）2026年 4月〜6月</p>
 </header>
 
 <div class="legend">
@@ -256,55 +256,9 @@
 </div>
 
 <div class="tabs">
-  <div class="tab" onclick="showMonth(3)">3月</div>
   <div class="tab" onclick="showMonth(4)">4月</div>
   <div class="tab" onclick="showMonth(5)">5月</div>
   <div class="tab active" onclick="showMonth(6)">6月</div>
-</div>
-
-<!-- ======== 3月 ======== -->
-<div id="m3" class="month-content">
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr class="row-school">
-          <th rowspan="2" class="th-date">日付</th>
-          <th colspan="3" class="th-kanon">🟠 観音寺スクール</th>
-          <th colspan="3" class="th-takamatsu">🟢 高松スクール</th>
-          <th rowspan="2" class="th-event">イベント</th>
-        </tr>
-        <tr class="row-course">
-          <th class="tc-kanon">小学生<span>9:30〜10:30</span></th>
-          <th class="tc-kanon">専門基礎<span>11:00〜12:30</span></th>
-          <th class="tc-kanon">アスリート<span>13:30〜15:00</span></th>
-          <th class="tc-takamatsu">小学生<span>17:00〜18:00</span></th>
-          <th class="tc-takamatsu">アスリート<span>18:30〜20:00</span></th>
-          <th class="tc-takamatsu">大人スプリント<span>18:30〜20:00</span></th>
-        </tr>
-      </thead>
-      <tbody id="tb3"></tbody>
-    </table>
-  </div>
-  <div class="events-box">
-    <h3>🎯 3月のイベント・特別講習</h3>
-    <div class="ev-item">
-      <div class="ev-name">幅跳び講習</div>
-      <div class="ev-detail">担当：小山コーチ｜対象：初心者〜試合参加者<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">幅講習（3/14 土）18:30〜20:00 ＠屋島</div>
-      <div class="ev-detail">担当：小山コーチ｜料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">SD（スタート）講習（3/17 火）18:30〜20:00 ＠屋島</div>
-      <div class="ev-detail">担当：小山コーチ｜競技会のスターティングブロック練習に特化した内容<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">投げ講習</div>
-      <div class="ev-detail">担当：大西コーチ｜<span class="ev-cancel">※3月は実施いたしません</span></div>
-    </div>
-  </div>
-  <div class="next-note">📅 4月予定（案）… 火曜：7日、14日、28日 ／ 金曜：3日、10日、24日 ／ 土曜：4日、11日、25日</div>
 </div>
 
 <!-- ======== 4月 ======== -->
@@ -476,44 +430,6 @@ function row(d) {
   </tr>`;
 }
 
-// === 3月データ ===
-// ke=観音寺小学生 ka=観音寺専門基礎 kt=観音寺アスリート
-// te=高松小学生   ta=高松アスリート  tu=大人スプリント
-// ev=イベント
-const d3=[
-  {d:'3/1', day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/2', day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/3', day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'3/4', day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/5', day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/6', day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:'rest',ev:null},
-  {d:'3/7', day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:{loc:'芝生公園'},te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'3/8', day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/9', day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/10',day:'火',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:null,ev:null},
-  {d:'3/11',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/12',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/13',day:'金',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:'rest',ev:null},
-  {d:'3/14',day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:'rest',te:{loc:'屋島'},ta:'rest',tu:null,ev:'幅講習 18:30〜'},
-  {d:'3/15',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/16',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/17',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:'rest',tu:null,ev:'SD講習 18:30〜'},
-  {d:'3/18',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/19',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/20',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:'rest',tu:'rest',ev:null},
-  {d:'3/21',day:'土',ke:'rest',ka:'rest',kt:'rest',te:'rest',ta:'rest',tu:null,ev:null},
-  {d:'3/22',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/23',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/24',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'3/25',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/26',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/27',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:{loc:'屋島'},ev:null},
-  {d:'3/28',day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:{loc:'芝生公園'},te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'3/29',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/30',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'3/31',day:'火',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:null,ev:null},
-];
-
 // === 4月データ ===
 const d4=[
   {d:'4/1', day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
@@ -621,15 +537,15 @@ const d6=[
 function render(data, id) {
   document.getElementById(id).innerHTML = data.map(row).join('');
 }
-render(d3,'tb3'); render(d4,'tb4'); render(d5,'tb5'); render(d6,'tb6');
+render(d4,'tb4'); render(d5,'tb5'); render(d6,'tb6');
 
 // === タブ ===
 function showMonth(n) {
-  [3,4,5,6].forEach(m => {
+  [4,5,6].forEach(m => {
     document.getElementById('m'+m).classList.toggle('active', m===n);
   });
   document.querySelectorAll('.tab').forEach((t,i) => {
-    t.classList.toggle('active', i===n-3);
+    t.classList.toggle('active', i===n-4);
   });
 }
 </script>
