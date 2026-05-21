@@ -302,7 +302,7 @@
     </select>
     <label>曜日</label>
     <select id="fdDay" onchange="runFinder()">
-      <option value="">― 選択 ―</option>
+      <option value="all">全曜日</option>
       <option value="月">月</option>
       <option value="火">火</option>
       <option value="水">水</option>
@@ -645,8 +645,8 @@ function runFinder() {
   const day = document.getElementById('fdDay').value;
   const course = document.getElementById('fdCourse').value;
   const result = document.getElementById('fdResult');
-  if (!day || !course) {
-    result.innerHTML = '<div class="empty">曜日とコースを選ぶと実施日一覧が表示されます。</div>';
+  if (!course) {
+    result.innerHTML = '<div class="empty">コースを選ぶと実施日一覧が表示されます。</div>';
     return;
   }
   const monthData = {4:d4, 5:d5, 6:d6};
@@ -656,8 +656,9 @@ function runFinder() {
   } else {
     pool = monthData[Number(month)] || [];
   }
-  const hits = pool.filter(r => r.day === day && r[course] && r[course] !== 'rest');
-  const monthLabel = month === 'all' ? '4〜6月' : (month + '月');
+  const hits = pool.filter(r => (day === 'all' || r.day === day) && r[course] && r[course] !== 'rest');
+  const monthLabel = month === 'all' ? (MONTHS[0] + '〜' + MONTHS[MONTHS.length-1] + '月') : (month + '月');
+  const dayLabel = day === 'all' ? '全曜日' : (day + '曜日');
   if (hits.length === 0) {
     result.innerHTML = `<div class="empty">${monthLabel}に該当する実施日はありません（おやすみ・対象外）。</div>`;
     return;
@@ -667,7 +668,7 @@ function runFinder() {
     const loc = r[course].loc;
     return `<div class="finder-item"><span class="fi-date">${r.d}（${r.day}）</span><span class="fi-loc">${locHtml(loc)}</span></div>`;
   }).join('');
-  result.innerHTML = `<div class="finder-summary">📅 <b>${monthLabel}</b>・<b>${day}曜日</b>の<b>${courseLabel}</b>：全 ${hits.length} 回</div><div class="finder-list">${items}</div>`;
+  result.innerHTML = `<div class="finder-summary">📅 <b>${monthLabel}</b>・<b>${dayLabel}</b>の<b>${courseLabel}</b>：全 ${hits.length} 回</div><div class="finder-list">${items}</div>`;
 }
 
 </script>
