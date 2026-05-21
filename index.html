@@ -326,7 +326,7 @@
 <div class="tabs">
   <div class="tab" onclick="showMonth(4)">4月</div>
   <div class="tab" onclick="showMonth(5)">5月</div>
-  <div class="tab active" onclick="showMonth(6)">6月</div>
+  <div class="tab" onclick="showMonth(6)">6月</div>
 </div>
 
 <!-- ======== 4月 ======== -->
@@ -420,7 +420,7 @@
 </div>
 
 <!-- ======== 6月 ======== -->
-<div id="m6" class="month-content active">
+<div id="m6" class="month-content">
   <div class="table-wrap">
     <table>
       <thead>
@@ -607,15 +607,22 @@ function render(data, id) {
 }
 render(d4,'tb4'); render(d5,'tb5'); render(d6,'tb6');
 
-// === タブ ===
+// === タブ（初期表示は今日の月を自動選択、なければ最新月） ===
+const MONTHS = [4,5,6];
 function showMonth(n) {
-  [4,5,6].forEach(m => {
+  MONTHS.forEach(m => {
     document.getElementById('m'+m).classList.toggle('active', m===n);
   });
   document.querySelectorAll('.tab').forEach((t,i) => {
-    t.classList.toggle('active', i===n-4);
+    t.classList.toggle('active', MONTHS[i]===n);
   });
 }
+(function autoSelectMonth(){
+  const today = new Date();
+  const m = today.getMonth() + 1;
+  const target = MONTHS.includes(m) ? m : MONTHS[MONTHS.length-1];
+  showMonth(target);
+})();
 
 // === 実施日フィルター ===
 function runFinder() {
