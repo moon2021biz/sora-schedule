@@ -278,7 +278,7 @@
 
 <header>
   <h1>🏃 SORA 予定表</h1>
-  <p>Basic Sports Club SORA（ベーシックスポーツクラブ ソラ）2026年 5月〜7月</p>
+  <p id="subtitle">Basic Sports Club SORA（ベーシックスポーツクラブ ソラ）</p>
 </header>
 
 <div class="legend">
@@ -327,134 +327,8 @@
   </div>
 </div>
 
-<div class="tabs">
-  <div class="tab" onclick="showMonth(5)">5月</div>
-  <div class="tab" onclick="showMonth(6)">6月</div>
-  <div class="tab" onclick="showMonth(7)">7月</div>
-</div>
-
-<!-- ======== 5月 ======== -->
-<div id="m5" class="month-content">
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr class="row-school">
-          <th rowspan="2" class="th-date">日付</th>
-          <th colspan="3" class="th-kanon">🟠 観音寺スクール</th>
-          <th colspan="3" class="th-takamatsu">🟢 高松スクール</th>
-          <th rowspan="2" class="th-event">イベント</th>
-        </tr>
-        <tr class="row-course">
-          <th class="tc-kanon">小学生<span>9:30〜10:30</span></th>
-          <th class="tc-kanon">専門基礎<span>11:00〜12:30</span></th>
-          <th class="tc-kanon">アスリート<span>13:30〜15:00</span></th>
-          <th class="tc-takamatsu">小学生<span>17:00〜18:00</span></th>
-          <th class="tc-takamatsu">アスリート<span>18:30〜20:00</span></th>
-          <th class="tc-takamatsu">大人スプリント<span>18:30〜20:00</span></th>
-        </tr>
-      </thead>
-      <tbody id="tb5"></tbody>
-    </table>
-  </div>
-  <div class="events-box">
-    <h3>🎯 5月のイベント・特別講習</h3>
-    <div class="ev-item">
-      <div class="ev-name">幅跳び講習</div>
-      <div class="ev-detail">担当：小山コーチ｜対象：初心者〜試合参加者<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">投げ講習（5/15 金）17:30〜19:00</div>
-      <div class="ev-detail">📍 <b>場所：観音寺総合運動公園 陸上競技場</b><br>担当：大西コーチ｜対象：初心者〜試合参加者<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者2名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">SD（スタート）講習（5/26 火）18:30〜20:00 ＠屋島</div>
-      <div class="ev-detail">担当：小山コーチ｜競技会のスターティングブロック練習に特化した内容<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-  </div>
-  <div class="next-note">📅 6月予定（案）… 火曜：2日、16日、23日 ／ 金曜：5日、19日、26日 ／ 土曜：6日、20日、27日</div>
-</div>
-
-<!-- ======== 6月 ======== -->
-<div id="m6" class="month-content">
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr class="row-school">
-          <th rowspan="2" class="th-date">日付</th>
-          <th colspan="3" class="th-kanon">🟠 観音寺スクール</th>
-          <th colspan="3" class="th-takamatsu">🟢 高松スクール</th>
-          <th rowspan="2" class="th-event">イベント</th>
-        </tr>
-        <tr class="row-course">
-          <th class="tc-kanon">小学生<span>9:30〜10:30</span></th>
-          <th class="tc-kanon">専門基礎<span>11:00〜12:30</span></th>
-          <th class="tc-kanon">アスリート<span>13:30〜15:00</span></th>
-          <th class="tc-takamatsu">小学生<span>17:00〜18:00</span></th>
-          <th class="tc-takamatsu">アスリート<span>18:30〜20:00</span></th>
-          <th class="tc-takamatsu">大人スプリント<span>18:30〜20:00</span></th>
-        </tr>
-      </thead>
-      <tbody id="tb6"></tbody>
-    </table>
-  </div>
-  <div class="events-box">
-    <h3>🎯 6月のイベント・特別講習</h3>
-    <div class="ev-item">
-      <div class="ev-name">幅跳び講習（6/6 土）18:30〜20:00 ＠屋島</div>
-      <div class="ev-detail">担当：小山コーチ｜対象：初心者〜試合参加者<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">投げ講習（6/12 金）17:30〜19:00 ＠競技場</div>
-      <div class="ev-detail">📍 <b>場所：観音寺総合運動公園 陸上競技場</b><br>担当：大西コーチ｜対象：初心者〜試合参加者<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者2名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">SD（スタート）講習（6/16 火）18:30〜20:00 ＠屋島</div>
-      <div class="ev-detail">担当：小山コーチ｜競技会のスターティングブロック練習に特化した内容<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-  </div>
-  <div class="next-note">📅 7月予定（案）… 火曜：7日、14日、28日 ／ 金曜：10日、17日、24日 ／ 土曜：11日、18日、25日</div>
-</div>
-
-<!-- ======== 7月 ======== -->
-<div id="m7" class="month-content">
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr class="row-school">
-          <th rowspan="2" class="th-date">日付</th>
-          <th colspan="3" class="th-kanon">🟠 観音寺スクール</th>
-          <th colspan="3" class="th-takamatsu">🟢 高松スクール</th>
-          <th rowspan="2" class="th-event">イベント</th>
-        </tr>
-        <tr class="row-course">
-          <th class="tc-kanon">小学生<span>9:30〜10:30</span></th>
-          <th class="tc-kanon">専門基礎<span>11:00〜12:30</span></th>
-          <th class="tc-kanon">アスリート<span>13:30〜15:00</span></th>
-          <th class="tc-takamatsu">小学生<span>17:00〜18:00</span></th>
-          <th class="tc-takamatsu">アスリート<span>18:30〜20:00</span></th>
-          <th class="tc-takamatsu">大人スプリント<span>18:30〜20:00</span></th>
-        </tr>
-      </thead>
-      <tbody id="tb7"></tbody>
-    </table>
-  </div>
-  <div class="events-box">
-    <h3>🎯 7月のイベント・特別講習</h3>
-    <div class="ev-item">
-      <div class="ev-name">投げ講習（7/10 金）17:30〜19:00 ＠競技場</div>
-      <div class="ev-detail">📍 <b>場所：観音寺総合運動公園 陸上競技場</b><br>担当：大西コーチ｜対象：初心者〜試合参加者<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者2名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">SD（スタート）講習（7/14 火）18:30〜20:00 ＠屋島</div>
-      <div class="ev-detail">担当：小山コーチ｜競技会のスターティングブロック練習に特化した内容<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-    <div class="ev-item">
-      <div class="ev-name">幅講習（7/25 土）18:30〜20:00 ＠屋島</div>
-      <div class="ev-detail">担当：小山コーチ｜対象：初心者〜試合参加者<br>料金：4,400円（会員様半額）＋競技場利用料｜参加者3名以上で開催</div>
-    </div>
-  </div>
-  <div class="next-note">📅 8月予定（案）… 火曜：4日、18日、25日 ／ 金曜：7日、21日、28日 ／ 土曜：8日、22日、29日</div>
-</div>
+<div class="tabs" id="tabs"></div>
+<div id="months"><div style="padding:40px 20px;text-align:center;color:#888">読み込み中…</div></div>
 
 <footer>
   Basic Sports Club SORA ｜ 株式会社MOON<br>
@@ -463,207 +337,141 @@
 </footer>
 
 <script>
-// === ユーティリティ ===
-function locHtml(loc) {
-  const map = {
-    '紀伊小':'loc-kiisho','競技場':'loc-kyogi',
-    '屋島':'loc-yashima','屋島（室内）':'loc-yashima',
-    '綾川':'loc-ayagawa','芝生公園':'loc-shibaen'
-  };
-  return `<span class="${map[loc]||''}">${loc}</span>`;
+const API='https://superior-admin.pages.dev';
+const COURSE_COLS=[
+  {key:'ke',club:'観音寺',course:'小学生'},
+  {key:'ka',club:'観音寺',course:'専門基礎'},
+  {key:'kt',club:'観音寺',course:'アスリート'},
+  {key:'te',club:'高松',course:'小学生'},
+  {key:'ta',club:'高松',course:'アスリート'},
+  {key:'tu',club:'高松',course:'大人スプリント'},
+];
+const WD=['日','月','火','水','木','金','土'];
+const LOCMAP={'紀伊小':'loc-kiisho','競技場':'loc-kyogi','屋島':'loc-yashima','屋島（室内）':'loc-yashima','綾川':'loc-ayagawa','芝生公園':'loc-shibaen'};
+function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function locHtml(loc){return `<span class="${LOCMAP[loc]||''}">${esc(loc)}</span>`;}
+function cellVal(entry,course){
+  if(!entry)return null;
+  if(entry.cancelled)return 'rest';
+  const v=entry.courseVenues&&entry.courseVenues[course];
+  return (v&&String(v).trim())?{loc:String(v).trim()}:'rest';
 }
-
-function cell(v, school, isBorderLeft) {
-  const bg = school==='kanon' ? 'kanon' : school==='taka' ? 'taka' : '';
-  const border = isBorderLeft ? (school==='kanon'?'border-left-kanon':school==='taka'?'border-left-taka':'border-left-event') : '';
-  const cls = [bg, border].filter(Boolean).join(' ');
-  if (v === null) return `<td class="c-none ${cls}">―</td>`;
-  if (v === 'rest') return `<td class="c-rest ${cls}">おやすみ</td>`;
+function cell(v,school,bl){
+  const bg=school==='kanon'?'kanon':school==='taka'?'taka':'';
+  const border=bl?(school==='kanon'?'border-left-kanon':school==='taka'?'border-left-taka':'border-left-event'):'';
+  const cls=[bg,border].filter(Boolean).join(' ');
+  if(v===null)return `<td class="c-none ${cls}">―</td>`;
+  if(v==='rest')return `<td class="c-rest ${cls}">おやすみ</td>`;
   return `<td class="c-active ${cls}">${locHtml(v.loc)}</td>`;
 }
-
-function row(d) {
-  const cls = d.day==='土'?'sat':d.day==='日'?'sun':
-    (!d.ke&&!d.ka&&!d.kt&&!d.te&&!d.ta&&!d.tu&&!d.ev)?'empty-day':'';
-  const ev = d.ev ? `<span class="ev-badge">${d.ev}</span>` : '―';
-  return `<tr class="${cls}">
-    <td class="date-cell">${d.d}（${d.day}）</td>
-    ${cell(d.ke,'kanon',true)}${cell(d.ka,'kanon',false)}${cell(d.kt,'kanon',false)}
-    ${cell(d.te,'taka',true)}${cell(d.ta,'taka',false)}${cell(d.tu,'taka',false)}
-    <td class="border-left-event">${ev}</td>
-  </tr>`;
+function rowHtml(d){
+  const cls=d.day==='土'?'sat':d.day==='日'?'sun':(!d.ke&&!d.ka&&!d.kt&&!d.te&&!d.ta&&!d.tu&&!d.ev?'empty-day':'');
+  const ev=d.ev?`<span class="ev-badge">${esc(d.ev)}</span>`:'―';
+  return `<tr class="${cls}"><td class="date-cell">${d.d}（${d.day}）</td>${cell(d.ke,'kanon',true)}${cell(d.ka,'kanon',false)}${cell(d.kt,'kanon',false)}${cell(d.te,'taka',true)}${cell(d.ta,'taka',false)}${cell(d.tu,'taka',false)}<td class="border-left-event">${ev}</td></tr>`;
 }
+const HEADHTML='<thead><tr class="row-school"><th rowspan="2" class="th-date">日付</th><th colspan="3" class="th-kanon">🟠 観音寺スクール</th><th colspan="3" class="th-takamatsu">🟢 高松スクール</th><th rowspan="2" class="th-event">イベント</th></tr><tr class="row-course"><th class="tc-kanon">小学生<span>9:30〜10:30</span></th><th class="tc-kanon">専門基礎<span>11:00〜12:30</span></th><th class="tc-kanon">アスリート<span>13:30〜15:00</span></th><th class="tc-takamatsu">小学生<span>17:00〜18:00</span></th><th class="tc-takamatsu">アスリート<span>18:30〜20:00</span></th><th class="tc-takamatsu">大人スプリント<span>18:30〜20:00</span></th></tr></thead>';
 
-// === 5月データ ===
-const d5=[
-  {d:'5/1', day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:'rest',tu:{loc:'屋島'},ev:null},
-  {d:'5/2', day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:'rest',te:{loc:'屋島'},ta:'rest',tu:null,ev:null},
-  {d:'5/3', day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/4', day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/5', day:'火',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:'rest',ev:null},
-  {d:'5/6', day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/7', day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/8', day:'金',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:'rest',ev:null},
-  {d:'5/9', day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:{loc:'芝生公園'},te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'5/10',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/11',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/12',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'5/13',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/14',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/15',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:'rest',ev:'投げ講習 17:30〜 ＠競技場'},
-  {d:'5/16',day:'土',ke:'rest',ka:'rest',kt:'rest',te:'rest',ta:'rest',tu:null,ev:null},
-  {d:'5/17',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/18',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/19',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'5/20',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/21',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/22',day:'金',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:'rest',ev:null},
-  {d:'5/23',day:'土',ke:'rest',ka:'rest',kt:'rest',te:'rest',ta:'rest',tu:null,ev:null},
-  {d:'5/24',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/25',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/26',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島（室内）'},ta:'rest',tu:null,ev:'SD講習 18:30〜'},
-  {d:'5/27',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/28',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'5/29',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:{loc:'屋島'},ev:null},
-  {d:'5/30',day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:{loc:'競技場'},te:{loc:'綾川'},ta:{loc:'綾川'},tu:null,ev:null},
-  {d:'5/31',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-];
+let SCHED=null, MONTHS=[], MONTHDATA={};
 
-// === 6月データ ===
-const d6=[
-  {d:'6/1', day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/2', day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'6/3', day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/4', day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/5', day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:{loc:'屋島'},ev:null},
-  {d:'6/6', day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:'rest',te:{loc:'屋島'},ta:'rest',tu:null,ev:'幅跳び講習 18:30〜 ＠屋島'},
-  {d:'6/7', day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/8', day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/9', day:'火',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:null,ev:null},
-  {d:'6/10',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/11',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/12',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:'rest',tu:'rest',ev:'投げ講習 17:30〜 ＠競技場'},
-  {d:'6/13',day:'土',ke:'rest',ka:'rest',kt:'rest',te:'rest',ta:'rest',tu:null,ev:null},
-  {d:'6/14',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/15',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/16',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:'rest',tu:null,ev:'SD講習 18:30〜 ＠屋島'},
-  {d:'6/17',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/18',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/19',day:'金',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:'rest',ev:null},
-  {d:'6/20',day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:{loc:'芝生公園'},te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'6/21',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/22',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/23',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'6/24',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/25',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/26',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:{loc:'屋島'},ev:null},
-  {d:'6/27',day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:{loc:'競技場'},te:{loc:'綾川'},ta:{loc:'綾川'},tu:null,ev:null},
-  {d:'6/28',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/29',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'6/30',day:'火',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:null,ev:null},
-];
-
-// === 7月データ ===
-const d7=[
-  {d:'7/1', day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/2', day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/3', day:'金',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:'rest',ev:null},
-  {d:'7/4', day:'土',ke:'rest',ka:'rest',kt:'rest',te:'rest',ta:'rest',tu:null,ev:null},
-  {d:'7/5', day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/6', day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/7', day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'7/8', day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/9', day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/10',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:{loc:'屋島'},ev:'投げ講習 17:30〜 ＠競技場'},
-  {d:'7/11',day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:{loc:'競技場'},te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'7/12',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/13',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/14',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:'rest',tu:null,ev:'SD講習 18:30〜 ＠屋島'},
-  {d:'7/15',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/16',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/17',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:{loc:'屋島'},ev:null},
-  {d:'7/18',day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:{loc:'芝生公園'},te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'7/19',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/20',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/21',day:'火',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:null,ev:null},
-  {d:'7/22',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/23',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/24',day:'金',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:'rest',tu:'rest',ev:null},
-  {d:'7/25',day:'土',ke:{loc:'紀伊小'},ka:{loc:'紀伊小'},kt:'rest',te:{loc:'屋島'},ta:'rest',tu:null,ev:'幅講習 18:30〜 ＠屋島'},
-  {d:'7/26',day:'日',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/27',day:'月',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/28',day:'火',ke:null,ka:null,kt:null,te:{loc:'屋島'},ta:{loc:'屋島'},tu:null,ev:null},
-  {d:'7/29',day:'水',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/30',day:'木',ke:null,ka:null,kt:null,te:null,ta:null,tu:null,ev:null},
-  {d:'7/31',day:'金',ke:null,ka:null,kt:null,te:'rest',ta:'rest',tu:'rest',ev:null},
-];
-
-// === レンダリング ===
-function render(data, id) {
-  document.getElementById(id).innerHTML = data.map(row).join('');
-}
-render(d5,'tb5'); render(d6,'tb6'); render(d7,'tb7');
-
-// === タブ（初期表示は今日の月を自動選択、なければ最新月） ===
-const MONTHS = [5,6,7];
-function showMonth(n) {
-  MONTHS.forEach(m => {
-    document.getElementById('m'+m).classList.toggle('active', m===n);
-  });
-  document.querySelectorAll('.tab').forEach((t,i) => {
-    t.classList.toggle('active', MONTHS[i]===n);
+function buildMonths(){
+  const data=SCHED.data||{}, events=SCHED.events||{};
+  const set=new Set();
+  Object.values(data).forEach(dd=>Object.keys(dd||{}).forEach(dt=>set.add(dt.slice(0,7))));
+  Object.keys(events).forEach(dt=>set.add(dt.slice(0,7)));
+  MONTHS=[...set].sort();
+  MONTHDATA={};
+  MONTHS.forEach(ym=>{
+    const y=Number(ym.slice(0,4)), m=Number(ym.slice(5,7));
+    const last=new Date(y,m,0).getDate();
+    const rows=[];
+    for(let dd=1;dd<=last;dd++){
+      const dt=ym+'-'+String(dd).padStart(2,'0');
+      const r={d:m+'/'+dd,day:WD[new Date(y,m-1,dd).getDay()],date:dt};
+      COURSE_COLS.forEach(c=>{r[c.key]=cellVal((data[c.club]||{})[dt],c.course);});
+      r.ev=events[dt]||null;
+      rows.push(r);
+    }
+    MONTHDATA[ym]=rows;
   });
 }
-(function autoSelectMonth(){
-  const today = new Date();
-  const m = today.getMonth() + 1;
-  const target = MONTHS.includes(m) ? m : MONTHS[MONTHS.length-1];
+function eventBoxHtml(ym){
+  const det=SCHED.eventsDetail||{};
+  const items=[];
+  Object.keys(det).sort().forEach(dt=>{
+    if(dt.slice(0,7)!==ym)return;
+    const y=Number(dt.slice(0,4)),mm=Number(dt.slice(5,7)),dd=Number(dt.slice(8,10));
+    const wd=WD[new Date(y,mm-1,dd).getDay()];
+    (det[dt]||[]).forEach(e=>{
+      const head=`${esc(e.name)}（${mm}/${dd} ${wd}）${e.time?' '+esc(e.time):''}${e.venue?' ＠'+esc(e.venue):''}`;
+      const l1=[e.coach?'担当：'+esc(e.coach):'', e.target?'対象：'+esc(e.target):''].filter(Boolean).join('｜');
+      const l2=[e.fee?'料金：'+esc(e.fee):'', e.min?esc(e.min):''].filter(Boolean).join('｜');
+      const detail=[l1,l2].filter(Boolean).join('<br>');
+      items.push(`<div class="ev-item"><div class="ev-name">${head}</div>${detail?`<div class="ev-detail">${detail}</div>`:''}</div>`);
+    });
+  });
+  if(!items.length)return '';
+  const m=Number(ym.slice(5,7));
+  return `<div class="events-box"><h3>🎯 ${m}月のイベント・特別講習</h3>${items.join('')}</div>`;
+}
+function renderTabs(){
+  document.getElementById('tabs').innerHTML=MONTHS.map(ym=>`<div class="tab" data-ym="${ym}" onclick="showMonth('${ym}')">${Number(ym.slice(5,7))}月</div>`).join('');
+}
+function renderMonths(){
+  const host=document.getElementById('months');
+  if(!MONTHS.length){host.innerHTML='<div style="padding:40px 20px;text-align:center;color:#888">公開された予定はまだありません。<br><span style="font-size:.85em">（管理アプリで「この月を公開」を押すと、ここに反映されます）</span></div>';return;}
+  host.innerHTML=MONTHS.map(ym=>`<div class="month-content" data-ym="${ym}"><div class="table-wrap"><table>${HEADHTML}<tbody>${MONTHDATA[ym].map(rowHtml).join('')}</tbody></table></div>${eventBoxHtml(ym)}</div>`).join('');
+}
+function showMonth(ym){
+  document.querySelectorAll('.month-content').forEach(el=>el.classList.toggle('active',el.dataset.ym===ym));
+  document.querySelectorAll('.tab').forEach(el=>el.classList.toggle('active',el.dataset.ym===ym));
+}
+function autoSelect(){
+  if(!MONTHS.length)return;
+  const now=new Date();
+  const nowYm=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+  const target=MONTHS.includes(nowYm)?nowYm:(MONTHS.find(m=>m>=nowYm)||MONTHS[MONTHS.length-1]);
   showMonth(target);
-})();
-
-// === 実施日フィルター ===
-// 月セレクトを動的生成（MONTHS配列から）
-(function initMonthSelect(){
-  const sel = document.getElementById('fdMonth');
-  MONTHS.forEach(m => {
-    const opt = document.createElement('option');
-    opt.value = String(m);
-    opt.textContent = m + '月';
-    sel.appendChild(opt);
-  });
-})();
-
-function runFinder() {
-  const month = document.getElementById('fdMonth').value;
-  const day = document.getElementById('fdDay').value;
-  const course = document.getElementById('fdCourse').value;
-  const result = document.getElementById('fdResult');
-  if (!course) {
-    result.innerHTML = '<div class="empty">コースを選ぶと実施日一覧が表示されます。</div>';
-    return;
-  }
-  const monthData = {5:d5, 6:d6, 7:d7};
-  let pool;
-  if (month === 'all') {
-    pool = MONTHS.flatMap(m => monthData[m] || []);
-  } else {
-    pool = monthData[Number(month)] || [];
-  }
-  const hits = pool.filter(r => (day === 'all' || r.day === day) && r[course] && r[course] !== 'rest');
-  const monthLabel = month === 'all' ? (MONTHS[0] + '〜' + MONTHS[MONTHS.length-1] + '月') : (month + '月');
-  const dayLabel = day === 'all' ? '全曜日' : (day + '曜日');
-  if (hits.length === 0) {
-    result.innerHTML = `<div class="empty">${monthLabel}に該当する実施日はありません（おやすみ・対象外）。</div>`;
-    return;
-  }
-  const courseLabel = document.getElementById('fdCourse').selectedOptions[0].text;
-  const items = hits.map(r => {
-    const loc = r[course].loc;
-    return `<div class="finder-item"><span class="fi-date">${r.d}（${r.day}）</span><span class="fi-loc">${locHtml(loc)}</span></div>`;
-  }).join('');
-  result.innerHTML = `<div class="finder-summary">📅 <b>${monthLabel}</b>・<b>${dayLabel}</b>の<b>${courseLabel}</b>：全 ${hits.length} 回</div><div class="finder-list">${items}</div>`;
 }
-
+function setSubtitle(){
+  const p=document.getElementById('subtitle');if(!p)return;
+  const base='Basic Sports Club SORA（ベーシックスポーツクラブ ソラ）';
+  if(!MONTHS.length){p.textContent=base;return;}
+  const f=MONTHS[0],l=MONTHS[MONTHS.length-1];
+  const fy=f.slice(0,4),ly=l.slice(0,4),fm=Number(f.slice(5,7)),lm=Number(l.slice(5,7));
+  const range=f===l?`${fy}年 ${fm}月`:(fy===ly?`${fy}年 ${fm}月〜${lm}月`:`${fy}年${fm}月〜${ly}年${lm}月`);
+  p.textContent=base+' '+range;
+}
+function initFinder(){
+  const sel=document.getElementById('fdMonth');
+  sel.innerHTML='<option value="all">全月</option>'+MONTHS.map(ym=>`<option value="${ym}">${Number(ym.slice(5,7))}月</option>`).join('');
+}
+function runFinder(){
+  const month=document.getElementById('fdMonth').value;
+  const day=document.getElementById('fdDay').value;
+  const course=document.getElementById('fdCourse').value;
+  const result=document.getElementById('fdResult');
+  if(!course){result.innerHTML='<div class="empty">コースを選ぶと実施日一覧が表示されます。</div>';return;}
+  const pool = month==='all' ? MONTHS.flatMap(m=>MONTHDATA[m]||[]) : (MONTHDATA[month]||[]);
+  const hits=pool.filter(r=>(day==='all'||r.day===day)&&r[course]&&r[course]!=='rest');
+  const monthLabel = month==='all' ? (MONTHS.length?Number(MONTHS[0].slice(5,7))+'〜'+Number(MONTHS[MONTHS.length-1].slice(5,7))+'月':'') : (Number(month.slice(5,7))+'月');
+  const dayLabel = day==='all'?'全曜日':(day+'曜日');
+  if(!hits.length){result.innerHTML=`<div class="empty">${monthLabel}に該当する実施日はありません（おやすみ・対象外）。</div>`;return;}
+  const courseLabel=document.getElementById('fdCourse').selectedOptions[0].text;
+  const items=hits.map(r=>`<div class="finder-item"><span class="fi-date">${r.d}（${r.day}）</span><span class="fi-loc">${locHtml(r[course].loc)}</span></div>`).join('');
+  result.innerHTML=`<div class="finder-summary">📅 <b>${monthLabel}</b>・<b>${dayLabel}</b>の<b>${esc(courseLabel)}</b>：全 ${hits.length} 回</div><div class="finder-list">${items}</div>`;
+}
+async function load(){
+  try{
+    const r=await fetch(API+'/api/schedule?org=SORA&cb='+Date.now());
+    SCHED=await r.json();
+    if(!SCHED||!SCHED.ok)throw new Error('bad');
+  }catch(e){
+    document.getElementById('months').innerHTML='<div style="padding:40px 20px;text-align:center;color:#c62828">予定表を読み込めませんでした。<br>通信環境を確認して、時間をおいて再度お試しください。</div>';
+    return;
+  }
+  buildMonths();setSubtitle();renderTabs();renderMonths();initFinder();autoSelect();
+}
+load();
 </script>
 </body>
 </html>
