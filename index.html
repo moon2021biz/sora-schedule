@@ -179,6 +179,7 @@
 
     /* セル */
     .c-rest { color: #e53935; font-size: 0.72rem; font-weight: bold; }
+    .c-tbd { color: #e6a817; font-size: 0.72rem; font-weight: bold; }
     .c-none { color: #ddd; font-size: 0.72rem; }
     .c-active { font-weight: bold; }
     .loc-kiisho  { color: #1565c0; }
@@ -352,9 +353,12 @@ function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,c=>({'&':'&amp;','
 function locHtml(loc){return `<span class="${LOCMAP[loc]||''}">${esc(loc)}</span>`;}
 function cellVal(entry,course){
   if(!entry)return null;
-  if(entry.cancelled)return 'rest';
+  if(entry.cancelled)return 'rest'; // 休講＝おやすみ
   const v=entry.courseVenues&&entry.courseVenues[course];
-  return (v&&String(v).trim())?{loc:String(v).trim()}:'rest';
+  if(v&&String(v).trim())return {loc:String(v).trim()}; // 会場確定
+  // 会場なし：この日が「調整中」（どのコースにも会場が入っていない＝会場未定）なら実施予定、確定日で他コースだけ会場ありならおやすみ
+  const anyVenue=(entry.courseVenues&&Object.keys(entry.courseVenues).some(k=>entry.courseVenues[k]&&String(entry.courseVenues[k]).trim()))||(entry.venue&&String(entry.venue).trim());
+  return anyVenue?'rest':'tbd';
 }
 function cell(v,school,bl){
   const bg=school==='kanon'?'kanon':school==='taka'?'taka':'';
@@ -362,6 +366,7 @@ function cell(v,school,bl){
   const cls=[bg,border].filter(Boolean).join(' ');
   if(v===null)return `<td class="c-none ${cls}">―</td>`;
   if(v==='rest')return `<td class="c-rest ${cls}">おやすみ</td>`;
+  if(v==='tbd')return `<td class="c-tbd ${cls}">実施予定</td>`;
   return `<td class="c-active ${cls}">${locHtml(v.loc)}</td>`;
 }
 function rowHtml(d){
