@@ -386,7 +386,11 @@ function buildMonths(){
   const set=new Set();
   Object.values(data).forEach(dd=>Object.keys(dd||{}).forEach(dt=>set.add(dt.slice(0,7))));
   Object.keys(events).forEach(dt=>set.add(dt.slice(0,7)));
-  MONTHS=[...set].sort();
+  // 表示は「1ヶ月前」まで。それより古い月は自動的に非表示にする（例：8月なら7月以降のみ表示・6月以前は消える）
+  const _now=new Date();
+  const _cut=new Date(_now.getFullYear(), _now.getMonth()-1, 1);
+  const cutYm=_cut.getFullYear()+'-'+String(_cut.getMonth()+1).padStart(2,'0');
+  MONTHS=[...set].filter(ym=>ym>=cutYm).sort();
   MONTHDATA={};
   MONTHS.forEach(ym=>{
     const y=Number(ym.slice(0,4)), m=Number(ym.slice(5,7));
